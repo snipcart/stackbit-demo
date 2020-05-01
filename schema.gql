@@ -350,6 +350,7 @@ type ContentfulConfigHeader implements Node @derivedTypes @dontInfer {
 
 type ContentfulConfig implements Node @derivedTypes @dontInfer {
   palette: String
+  alert: String
   header: ContentfulConfigHeader @link(by: "id", from: "header___NODE")
   footer: ContentfulConfigFooter @link(by: "id", from: "footer___NODE")
   title: contentfulConfigTitleTextNode @link(by: "id", from: "title___NODE")

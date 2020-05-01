@@ -6,6 +6,7 @@ import {graphql} from 'gatsby';
 import '../sass/main.scss';
 import Header from './Header';
 import Footer from './Footer';
+import Alert from './Alert';
 
 export const query = graphql`
   fragment LayoutFragment on ContentfulConfig {
@@ -13,6 +14,7 @@ export const query = graphql`
       title
     }
     palette
+    alert
     ...HeaderFragment
     ...FooterFragment
   }
@@ -68,6 +70,13 @@ export default class Body extends React.Component {
     render() {
         const page = _.get(this.props, 'page');
         const title = (_.has(page, 'title') ? _.get(page, 'title.title') + ' - ' : '') + _.get(this.props, 'config.title.title');
+        const alertMessage = _.get(this.props, 'config.alert')
+        
+        let alert;
+        if (alertMessage) {
+            alert = <Alert message={alertMessage} />
+        }
+        
         return (
             <React.Fragment>
                 <Helmet>
@@ -81,6 +90,7 @@ export default class Body extends React.Component {
                     <Header {...this.props} />
                     <main id="content" className="site-content">
                         {this.props.children}
+                        {alert}
                     </main>
                     <Footer {...this.props} />
                 </div>
