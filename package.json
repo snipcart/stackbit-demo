@@ -19,7 +19,7 @@
     "gatsby-plugin-schema-snapshot": "^1.0.0",
     "gatsby-source-contentful": "^2.1.85",
     "lodash": "^4.17.15",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "moment": "^2.23.0",
     "moment-strftime": "^0.5.0",
     "node-sass": "^4.13.1",
