@@ -13,7 +13,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "contentful-import": "^7.7.0",
-    "gatsby": "2.19.16",
+    "gatsby": "4.25.7",
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-schema-snapshot": "^1.0.0",
